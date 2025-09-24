@@ -133,11 +133,11 @@ def parse_color(color_str):
 def main():
     parser = argparse.ArgumentParser(description="为图片添加拍摄日期水印")
     parser.add_argument("--directory", help="图片文件夹路径", default="D:/研究生文件汇总/研一上/大语言模型辅助软件工程/第一次作业/photos")
-    parser.add_argument("--font_size", type=int, default=30, help="字体大小 (默认: 30)")
+    parser.add_argument("--font_size", type=int, default=100, help="字体大小 (默认: 100)")
     parser.add_argument("--color", type=str, default="255,255,255", 
                        help="水印颜色，格式: r,g,b (默认: 255,255,255 白色)")
     parser.add_argument("--position", choices=["左上角", "居中", "右下角"], 
-                       default="右下角", help="水印位置 (默认: 右下角)")
+                       default="居中", help="水印位置 (默认: 右下角)")
     
     args = parser.parse_args()
     
